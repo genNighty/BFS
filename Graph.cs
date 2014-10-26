@@ -35,13 +35,14 @@ namespace BFS
         {
             nodes.Add(n);
             prints.Add(n.label);
+            foreach(Node s in nodes)
+            Console.Write(s.label);
         }
 
         public void connectNode(Node start, Node end)
         {
             if (adjMatrix == null)
             {
-                size = nodes.Count;
                 adjMatrix = new int[size, size];
             }
 
@@ -51,6 +52,7 @@ namespace BFS
             if (skierowany == 0)
             {
                 adjMatrix[endIndex, startIndex] = 1;
+                printMatrix(prints);
             }
         }
 
@@ -76,6 +78,7 @@ namespace BFS
             printMatrix(prints);
             Queue q = new Queue();
             q.Enqueue(this.rootNode);
+
             printNode(this.rootNode);
             rootNode.visited = true;
             while (q.Count != 0)
