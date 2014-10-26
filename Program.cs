@@ -12,8 +12,10 @@ namespace BFS
         static void Main(string[] args)
         {
             MakeMagic magic = new MakeMagic();
+            Graph g = new Graph();
 
             magic.mayMagicBegin();
+
 
            /* Node nA = new Node('A');
             Node nB = new Node('B');
@@ -55,7 +57,7 @@ namespace BFS
             g.connectNode(nG, nI);*/
 
 
-            Node n1 = new Node("1");
+            /*Node n1 = new Node("1");
             Node n2 = new Node("2");
             Node n3 = new Node("3");
             Node n4 = new Node("4");
@@ -78,12 +80,12 @@ namespace BFS
             g.connectNode(n2, n5);
             g.connectNode(n3, n4);
             g.connectNode(n3, n6);
-            g.connectNode(n4, n1);
+            g.connectNode(n4, n1);*/
 
 
-		    Console.WriteLine("\nBFS WYGLADA TAK O\n");
-		    g.bfs();
-            Console.ReadKey();
+		Console.WriteLine("\nBFS WYGLADA TAK O\n");
+		g.bfs();
+            	Console.ReadKey();
         }
     }
 }
